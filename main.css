@@ -1,0 +1,55 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-gap: 1vh;
+    width: 100%;
+    grid-auto-rows: minmax(100px, auto);
+    animation: Move1 10s linear infinite;
+    position: absolute;
+}
+
+.container div{
+    background-image: linear-gradient(red, rgba(0, 128, 0, 0.411));
+}
+
+.container div:nth-child(even){
+    background-image: linear-gradient(orange, rgba(0, 0, 255, 0.534));
+}
+
+.container2{
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-gap: 1vh;
+    height: 100%;
+    grid-auto-columns: minmax(100px, auto);
+    position: absolute;
+    animation: Move2 10s linear infinite;
+}
+
+.container2 div{
+    background-image: linear-gradient(brown, rgba(128, 0, 128, 0.459));
+}
+
+.container2 div:nth-child(even){
+    background-image: linear-gradient(pink, rgba(0, 0, 0, 0.452));
+}
+
+@keyframes Move1{
+    0%{
+        top:80%;
+    }50%{
+        top:0%;
+    }100%{
+        top:80%;
+    }
+}
+
+@keyframes Move2{
+    0%{
+        left:90%;
+    }50%{
+        left:0%;
+    }100%{
+        left:90%;
+    }
+}
